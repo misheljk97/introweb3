@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petra - Las 7 Maravillas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .ficha-tecnica {
+            background-color: var(--bg-card-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+        .ficha-tecnica ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .ficha-tecnica li strong {
+            color: var(--accent-hover);
+        }
+        .seccion-texto {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+        }
+        .seccion-texto h3 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+        .autor-pie {
+            font-weight: bold;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="banner"></div>
+        <h1>Las 7 Maravillas del Mundo</h1>
+
+        <!-- Menú de navegación con la clase 'active' en Petra -->
+        <nav>
+            <ul>
+                <li><a href="menu.html">Inicio</a></li>
+                <li><a href="maravilla01.html">Chichén Itzá</a></li>
+                <li><a href="maravilla02.html">El Coliseo</a></li>
+                <li><a href="maravilla03.html">Cristo Redentor</a></li>
+                <li><a href="maravilla04.html">Gran Muralla</a></li>
+                <li><a href="maravilla05.html">Machu Picchu</a></li>
+                <li><a href="maravilla06.html" class="active">Petra</a></li>
+                <li><a href="maravilla07.html">Taj Mahal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="detalle-maravilla">
+            <h2>Petra: La Ciudad Rosa de Piedra</h2>
+            
+            <img src="img/maravilla06.jpg" alt="Petra" class="imagen-maravilla-principal">
+
+            <!-- Ficha Técnica de Jordania -->
+            <div class="ficha-tecnica">
+                <ul>
+                    <li><strong>Ubicación:</strong> Gobernación de Ma'an, Jordania</li>
+                    <li><strong>Civilización:</strong> Nabatea</li>
+                    <li><strong>Periodo:</strong> Siglo VIII a.C. – Siglo I d.C.</li>
+                    <li><strong>Declaración UNESCO:</strong> 1985</li>
+                </ul>
+            </div>
+
+            <!-- Información detallada de Petra -->
+            <div class="seccion-texto">
+                <h3>1. Historia y la Civilización Nabatea</h3>
+                <p>
+                    Petra fue la próspera capital del reino nabateo, un pueblo nómada árabe que transformó este cañón árido en un cruce comercial estratégico. Gracias a su ubicación, controlaba las rutas de caravanas que transportaban incienso, especias y sedas entre Arabia, Egipto, Grecia y Roma.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>2. Arquitectura Esculpida y Gestión del Agua</h3>
+                <p>
+                    Lo más asombroso de Petra es que sus edificios no fueron construidos levantando bloques, sino esculpidos directamente en los acantilados de piedra arenisca de tonos rojizos y rosados. Además, los nabateos diseñaron un impresionante sistema hidráulico con canales, represas y cisternas subterráneas que les permitía almacenar agua y sobrevivir en pleno desierto.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>3. Monumentos Emblemáticos</h3>
+                <p>
+                    El acceso a la ciudad se realiza a través del Siq, un estrecho desfiladero natural de más de un kilómetro. Al final del trayecto se revela "El Tesoro" (Al-Khazneh), un imponente templo con fachada helenística tallada en la roca. El complejo también alberga el Monasterio (Ad-Deir), un teatro romano excavado en piedra y cientos de tumbas reales.
+                </p>
+            </div>
+
+            <a href="menu.html" class="btn-volver">&larr; Volver al Menú Principal</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Las 7 Maravillas del Mundo Moderno. Creado por <span class="autor-pie">Mishel Ichau</span>.</p>
+    </footer>
+
+</body>
+</html>

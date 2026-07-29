@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Mahal - Las 7 Maravillas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .ficha-tecnica {
+            background-color: var(--bg-card-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+        .ficha-tecnica ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .ficha-tecnica li strong {
+            color: var(--accent-hover);
+        }
+        .seccion-texto {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+        }
+        .seccion-texto h3 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+        .autor-pie {
+            font-weight: bold;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="banner"></div>
+        <h1>Las 7 Maravillas del Mundo</h1>
+
+        <!-- Menú de navegación con la clase 'active' en el Taj Mahal -->
+        <nav>
+            <ul>
+                <li><a href="menu.html">Inicio</a></li>
+                <li><a href="maravilla01.html">Chichén Itzá</a></li>
+                <li><a href="maravilla02.html">El Coliseo</a></li>
+                <li><a href="maravilla03.html">Cristo Redentor</a></li>
+                <li><a href="maravilla04.html">Gran Muralla</a></li>
+                <li><a href="maravilla05.html">Machu Picchu</a></li>
+                <li><a href="maravilla06.html">Petra</a></li>
+                <li><a href="maravilla07.html" class="active">Taj Mahal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="detalle-maravilla">
+            <h2>Taj Mahal: El Poema en Mármol</h2>
+            
+            <img src="img/maravilla07.jpg" alt="Taj Mahal" class="imagen-maravilla-principal">
+
+            <!-- Ficha Técnica de India -->
+            <div class="ficha-tecnica">
+                <ul>
+                    <li><strong>Ubicación:</strong> Agra, Uttar Pradesh, India</li>
+                    <li><strong>Estilo:</strong> Arquitectura Mogola</li>
+                    <li><strong>Construcción:</strong> 1631 – 1653 d.C.</li>
+                    <li><strong>Declaración UNESCO:</strong> 1983</li>
+                </ul>
+            </div>
+
+            <!-- Información detallada del Taj Mahal -->
+            <div class="seccion-texto">
+                <h3>1. Historia y Promesa de Amor</h3>
+                <p>
+                    El Taj Mahal es un monumento funerario erigido por el emperador mogol Shah Jahan en memoria de su esposa favorita, Arjumand Banu Begum (conocida como Mumtaz Mahal), quien falleció durante el parto de su decimocuarto hijo. Devastado por la pena, el emperador ordenó construir el mausoleo más espléndido jamás visto para honrar su memoria.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>2. Arquitectura e Incrustaciones</h3>
+                <p>
+                    Esta obra cumbre de la arquitectura mogola combina armoniosamente elementos islámicos, persas, indios y otomanos. El edificio principal está revestido de mármol blanco translúcido importado de diferentes regiones, decorado con caligrafía coránica e incrustaciones de piedras semipreciosas (técnica Pietra Dura) como lapislázuli, jade, turquesa y jaspe.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>3. Simetría y Jardines</h3>
+                <p>
+                    El complejo destaca por su simetría casi perfecta en torno a sus cuatro minaretes, sus cuatro fachadas y sus jardines de estilo Charbagh, cruzados por un canal de agua central que refleja la imagen del mausoleo. La única asimetría en todo el conjunto es la tumba del propio Shah Jahan, colocada junto a la de su esposa tras su muerte.
+                </p>
+            </div>
+
+            <a href="menu.html" class="btn-volver">&larr; Volver al Menú Principal</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Las 7 Maravillas del Mundo Moderno. Creado por <span class="autor-pie">Mishel Ichau</span>.</p>
+    </footer>
+
+</body>
+</html>

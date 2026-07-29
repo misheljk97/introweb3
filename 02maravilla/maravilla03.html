@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristo Redentor - Las 7 Maravillas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .ficha-tecnica {
+            background-color: var(--bg-card-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+        .ficha-tecnica ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .ficha-tecnica li strong {
+            color: var(--accent-hover);
+        }
+        .seccion-texto {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+        }
+        .seccion-texto h3 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+        .autor-pie {
+            font-weight: bold;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="banner"></div>
+        <h1>Las 7 Maravillas del Mundo</h1>
+
+        <!-- Menú de navegación con la clase 'active' en el Cristo Redentor -->
+        <nav>
+            <ul>
+                <li><a href="menu.html">Inicio</a></li>
+                <li><a href="maravilla01.html">Chichén Itzá</a></li>
+                <li><a href="maravilla02.html">El Coliseo</a></li>
+                <li><a href="maravilla03.html" class="active">Cristo Redentor</a></li>
+                <li><a href="maravilla04.html">Gran Muralla</a></li>
+                <li><a href="maravilla05.html">Machu Picchu</a></li>
+                <li><a href="maravilla06.html">Petra</a></li>
+                <li><a href="maravilla07.html">Taj Mahal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="detalle-maravilla">
+            <h2>Cristo Redentor: El Guardián de Brasil</h2>
+            
+            <img src="img/maravilla03.jpg" alt="Cristo Redentor" class="imagen-maravilla-principal">
+
+            <!-- Ficha Técnica de Brasil -->
+            <div class="ficha-tecnica">
+                <ul>
+                    <li><strong>Ubicación:</strong> Río de Janeiro, Brasil</li>
+                    <li><strong>Estilo:</strong> Art Déco</li>
+                    <li><strong>Inauguración:</strong> 12 de octubre de 1931</li>
+                    <li><strong>Altura:</strong> 38 metros (incluyendo pedestal)</li>
+                </ul>
+            </div>
+
+            <!-- Información detallada del Cristo Redentor -->
+            <div class="seccion-texto">
+                <h3>1. Historia y Construcción</h3>
+                <p>
+                    La idea de erigir un monumento religioso en la cumbre del cerro del Corcovado surgió a mediados del siglo XIX, pero comenzó a materializarse en 1921 en el marco de las celebraciones por el centenario de la independencia de Brasil. La estructura fue diseñada por el ingeniero brasileño Heitor da Silva Costa y esculpida por el escultor francés Paul Landowski.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>2. Arquitectura y Materiales</h3>
+                <p>
+                    Esta obra maestra del estilo Art Déco está construida de hormigón armado recubierto por un mosaico de miles de pequeñas teselas triangulares de esteatita (piedra jabón), un material resistente a la intemperie y al paso del tiempo. Mide 30 metros de altura, a los que se suman 8 metros de su pedestal, y la distancia de mano a mano de los brazos extendidos alcanza los 28 metros.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>3. Simbolismo e Impacto Cultural</h3>
+                <p>
+                    Ubicado a 710 metros sobre el nivel del mar dentro del Parque Nacional de Tijuca, el Cristo Redentor domina la bahía de Guanabara. Más allá de su valor espiritual, representa la calidez del pueblo brasileño con sus brazos abiertos al mundo y se ha consolidado como el icono turístico más reconocido de toda Sudamérica.
+                </p>
+            </div>
+
+            <a href="menu.html" class="btn-volver">&larr; Volver al Menú Principal</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Las 7 Maravillas del Mundo Moderno. Creado por <span class="autor-pie">Mishel Ichau</span>.</p>
+    </footer>
+
+</body>
+</html>

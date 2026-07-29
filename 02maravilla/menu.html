@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las 7 Maravillas del Mundo - Mishel Ichau</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .contenedor-menus {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .grupo-menu {
+            background-color: var(--bg-card-alt);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .grupo-menu h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .autor-pie {
+            font-weight: bold;
+            color: var(--accent);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .tarjeta-contenido p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="banner"></div>
+        <h1>Las 7 Maravillas del Mundo</h1>
+        <p>Proyecto web desarrollado por <strong>Mishel Ichau</strong></p>
+
+        <!-- Menú en menu.html: Enlaces internos dentro de esta misma página -->
+        <div class="contenedor-menus">
+            <div class="grupo-menu">
+                <h4>Navegar a una sección de esta página:</h4>
+                <nav>
+                    <ul>
+                        <li><a href="#sec-chichen">Chichén Itzá</a></li>
+                        <li><a href="#sec-coliseo">El Coliseo</a></li>
+                        <li><a href="#sec-cristo">Cristo Redentor</a></li>
+                        <li><a href="#sec-muralla">Gran Muralla</a></li>
+                        <li><a href="#sec-machu">Machu Picchu</a></li>
+                        <li><a href="#sec-petra">Petra</a></li>
+                        <li><a href="#sec-taj">Taj Mahal</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="grid-maravillas">
+            
+            <!-- Maravilla 01 -->
+            <article id="sec-chichen" class="tarjeta-maravilla">
+                <img src="img/maravilla01.jpg" alt="Chichén Itzá">
+                <div class="tarjeta-contenido">
+                    <h3>1. Chichén Itzá</h3>
+                    <p><strong>México:</strong> Legendaria ciudad maya famosa por la pirámide de Kukulkán y sus precisos fenómenos astronómicos durante los equinoccios.</p>
+                    <a href="maravilla01.html" class="btn-ver-mas">Ver información completa</a>
+                </div>
+            </article>
+
+            <!-- Maravilla 02 -->
+            <article id="sec-coliseo" class="tarjeta-maravilla">
+                <img src="img/maravilla02.jpg" alt="El Coliseo de Roma">
+                <div class="tarjeta-contenido">
+                    <h3>2. El Coliseo Romano</h3>
+                    <p><strong>Italia:</strong> Impresionante anfiteatro del siglo I d.C. que albergaba luchas de gladiadores y espectáculos en el Imperio Romano.</p>
+                    <a href="maravilla02.html" class="btn-ver-mas">Ver información completa</a>
+                </div>
+            </article>
+
+            <!-- Maravilla 03 -->
+            <article id="sec-cristo" class="tarjeta-maravilla">
+                <img src="img/maravilla03.jpg" alt="El Cristo Redentor">
+                <div class="tarjeta-contenido">
+                    <h3>3. Cristo Redentor</h3>
+                    <p><strong>Brasil:</strong> Colosal estatua Art Déco de 38 metros situada sobre el cerro del Corcovado, símbolo emblemático de Río de Janeiro.</p>
+                    <a href="maravilla03.html" class="btn-ver-mas">Ver información completa</a>
+                </div>
+            </article>
+
+            <!-- Maravilla 04 -->
+            <article id="sec-muralla" class="tarjeta-maravilla">
+                <img src="img/maravilla04.jpg" alt="La Gran Muralla China">
+                <div class="tarjeta-contenido">
+                    <h3>4. La Gran Muralla China</h3>
+                    <p><strong>China:</strong> Gigantesca red de fortificaciones de más de 21,000 km construida para defender el imperio a lo largo de siglos.</p>
+                    <a href="maravilla04.html" class="btn-ver-mas">Ver información completa</a>
+                </div>
+            </article>
+
+            <!-- Maravilla 05 -->
+            <article id="sec-machu" class="tarjeta-maravilla">
+                <img src="img/maravilla05.jpg" alt="Machu Picchu">
+                <div class="tarjeta-contenido">
+                    <h3>5. Machu Picchu</h3>
+                    <p><strong>Perú:</strong> Sagrada ciudadela inca incrustada en las alturas de los Andes, célebre por su arquitectura en piedra sin mortero.</p>
+                    <a href="maravilla05.html" class="btn-ver-mas">Ver información completa</a>
+                </div>
+            </article>
+
+            <!-- Maravilla 06 -->
+            <article id="sec-petra" class="tarjeta-maravilla">
+                <img src="img/maravilla06.jpg" alt="Petra">
+                <div class="tarjeta-contenido">
+                    <h3>6. Petra</h3>
+                    <p><strong>Jordania:</strong> Histórica "Ciudad Rosa" esculpida directamente en acantilados de piedra por la civilización nabatea.</p>
+                    <a href="maravilla06.html" class="btn-ver-mas">Ver información completa</a>
+                </div>
+            </article>
+
+            <!-- Maravilla 07 -->
+            <article id="sec-taj" class="tarjeta-maravilla">
+                <img src="img/maravilla07.jpg" alt="Taj Mahal">
+                <div class="tarjeta-contenido">
+                    <h3>7. Taj Mahal</h3>
+                    <p><strong>India:</strong> Majestuoso mausoleo de mármol blanco erigido por el emperador Shah Jahan como tributo de amor a su esposa.</p>
+                    <a href="maravilla07.html" class="btn-ver-mas">Ver información completa</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Las 7 Maravillas del Mundo Moderno. Sitio creado por <span class="autor-pie">Mishel Ichau</span>.</p>
+    </footer>
+
+</body>
+</html>

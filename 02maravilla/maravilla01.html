@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chichén Itzá - Las 7 Maravillas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .ficha-tecnica {
+            background-color: var(--bg-card-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+        .ficha-tecnica ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .ficha-tecnica li strong {
+            color: var(--accent-hover);
+        }
+        .seccion-texto {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+        }
+        .seccion-texto h3 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+        .autor-pie {
+            font-weight: bold;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="banner"></div>
+        <h1>Las 7 Maravillas del Mundo</h1>
+
+        <!-- En las páginas individuales, el menú conecta hacia las demás páginas HTML -->
+        <nav>
+            <ul>
+                <li><a href="menu.html">Inicio</a></li>
+                <li><a href="maravilla01.html" class="active">Chichén Itzá</a></li>
+                <li><a href="maravilla02.html">El Coliseo</a></li>
+                <li><a href="maravilla03.html">Cristo Redentor</a></li>
+                <li><a href="maravilla04.html">Gran Muralla</a></li>
+                <li><a href="maravilla05.html">Machu Picchu</a></li>
+                <li><a href="maravilla06.html">Petra</a></li>
+                <li><a href="maravilla07.html">Taj Mahal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="detalle-maravilla">
+            <h2>Chichén Itzá: El Corazón Maya</h2>
+            
+            <img src="img/maravilla01.jpg" alt="Chichén Itzá" class="imagen-maravilla-principal">
+
+            <div class="ficha-tecnica">
+                <ul>
+                    <li><strong>Ubicación:</strong> Yucatán, México</li>
+                    <li><strong>Civilización:</strong> Maya</li>
+                    <li><strong>Periodo:</strong> 600 – 1200 d.C.</li>
+                    <li><strong>Declaración UNESCO:</strong> 1988</li>
+                </ul>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>1. Historia y Origen</h3>
+                <p>
+                    Chichén Itzá fue uno de los centros urbanos más prominentes de la civilización maya. Su nombre significa "En la boca del pozo de los Itzáes", haciendo referencia a los grandes cenotes naturales que abastecían de agua a la región y que poseían un profundo significado sagrado y ceremonial.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>2. La Pirámide de Kukulkán (El Castillo)</h3>
+                <p>
+                    Esta monumental edificación destaca por su avanzada arquitectura simétrica. Cuenta con 4 escalinatas de 91 escalones cada una, que sumados a la plataforma superior dan un total de 365 escalones, representando los días del año solar.
+                </p>
+                <p>
+                    Durante los equinoccios de primavera y otoño, el ángulo de la luz solar proyecta una sombra que simula el cuerpo de una serpiente emplumada (Kukulkán) descendiendo progresivamente hasta llegar a las cabezas de piedra esculpidas en la base.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>3. Aspectos Arqueológicos Destacados</h3>
+                <p>
+                    Además de la pirámide principal, el complejo alberga el Gran Juego de Pelota (el más grande descubierto en Mesoamérica), el Templo de los Guerreros, el Grupo de las Mil Columnas y El Caracol, una estructura circular utilizada como observatorio astronómico.
+                </p>
+            </div>
+
+            <a href="menu.html" class="btn-volver">&larr; Volver al Menú Principal</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Las 7 Maravillas del Mundo Moderno. Creado por <span class="autor-pie">Mishel Ichau</span>.</p>
+    </footer>
+
+</body>
+</html>

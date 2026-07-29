@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Gran Muralla China - Las 7 Maravillas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .ficha-tecnica {
+            background-color: var(--bg-card-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+        .ficha-tecnica ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .ficha-tecnica li strong {
+            color: var(--accent-hover);
+        }
+        .seccion-texto {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+        }
+        .seccion-texto h3 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+        .autor-pie {
+            font-weight: bold;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="banner"></div>
+        <h1>Las 7 Maravillas del Mundo</h1>
+
+        <!-- Menú de navegación con la clase 'active' en La Gran Muralla -->
+        <nav>
+            <ul>
+                <li><a href="menu.html">Inicio</a></li>
+                <li><a href="maravilla01.html">Chichén Itzá</a></li>
+                <li><a href="maravilla02.html">El Coliseo</a></li>
+                <li><a href="maravilla03.html">Cristo Redentor</a></li>
+                <li><a href="maravilla04.html" class="active">Gran Muralla</a></li>
+                <li><a href="maravilla05.html">Machu Picchu</a></li>
+                <li><a href="maravilla06.html">Petra</a></li>
+                <li><a href="maravilla07.html">Taj Mahal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="detalle-maravilla">
+            <h2>La Gran Muralla China: El Dragón de Piedra</h2>
+            
+            <img src="img/maravilla04.jpg" alt="La Gran Muralla China" class="imagen-maravilla-principal">
+
+            <!-- Ficha Técnica de China -->
+            <div class="ficha-tecnica">
+                <ul>
+                    <li><strong>Ubicación:</strong> Norte de China</li>
+                    <li><strong>Construcción:</strong> Siglos V a.C. – XVI d.C.</li>
+                    <li><strong>Longitud Total:</strong> 21,196 kilómetros</li>
+                    <li><strong>Declaración UNESCO:</strong> 1987</li>
+                </ul>
+            </div>
+
+            <!-- Información detallada de La Gran Muralla -->
+            <div class="seccion-texto">
+                <h3>1. Historia y Dinastías</h3>
+                <p>
+                    La construcción de la muralla no se realizó de una sola vez, sino a lo largo de varias dinastías imperiales para proteger las fronteras del imperio chino contra los ataques de los nómadas del norte (principalmente los mongoles). Fue el primer emperador de la China unificada, Qin Shi Huang, quien unió los primeros tramos, aunque la mayor parte de la estructura que vemos hoy en día fue reconstruida durante la Dinastía Ming.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>2. Arquitectura e Ingeniería</h3>
+                <p>
+                    Adaptándose a la topografía de montañas empinadas, desiertos y praderas, la muralla fue construida con una variedad de materiales locales como piedra, ladrillo, tierra apisonada y madera. Cuenta con torres de vigilancia estratégicamente ubicadas para transmitir señales de humo y fuego, cuarteles para las tropas y pasos fronterizos fuertemente fortificados.
+                </p>
+            </div>
+
+            <div class="seccion-texto">
+                <h3>3. Legado e Impacto Histórico</h3>
+                <p>
+                    Además de su función defensiva, la Gran Muralla sirvió como un efectivo control fronterizo para regular el comercio a lo largo de la Ruta de la Seda y gestionar la migración. Se trata del proyecto de ingeniería defensiva más largo y complejo jamás ejecutado por la humanidad.
+                </p>
+            </div>
+
+            <a href="menu.html" class="btn-volver">&larr; Volver al Menú Principal</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Las 7 Maravillas del Mundo Moderno. Creado por <span class="autor-pie">Mishel Ichau</span>.</p>
+    </footer>
+
+</body>
+</html>
