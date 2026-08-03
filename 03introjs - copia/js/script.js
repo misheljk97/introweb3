@@ -1,0 +1,37 @@
+const form = document.getElementById("formulario");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); //evita que se recargue la pagina
+  var nombres = document.getElementById("txtNombre").value;
+  var apellido = document.getElementById("txtApellido").value;
+  var correo = document.getElementById("txtCorreo").value;
+  var edad = document.getElementById("txtEdad").value;
+
+  var html =
+    "<table border='1'>" +
+    "<tr>" +
+    "<td> Nombres:<td/> " +
+    " <td>" +
+    nombres +
+    " </tr> " +
+    "<tr>" +
+    "<td> Apellido:<td/> " +
+    " <td>" +
+    apellido +
+    " </tr>" +
+    "<tr>" +
+    "<td> correo:<td/> " +
+    " <td>" +
+    correo +
+    " </tr>" +
+    "<tr>" +
+    "<td> edad:<td/> " +
+    " <td>" +
+    edad +
+    " </tr>" +
+    "<table>";
+
+  document.getElementById("resultado").innerHTML = html;
+  //"Nombres: "+nombres +"<br/>"+
+  //"Apellidos: "+apellido +"<br/>"
+});
