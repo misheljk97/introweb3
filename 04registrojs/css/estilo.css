@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff4ee; /* Fondo general color durazno muy bajito */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+/* Contenedor Principal */
+.main-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(220, 140, 110, 0.12); /* Sombra suave con tinte cálido */
+    overflow: hidden;
+    border: 1px solid #fde2d7;
+}
+
+/* BANNER PRINCIPAL (Hero Banner) */
+.hero-banner {
+    /* Degradado en tonos durazno suave a cálido */
+    background: linear-gradient(135deg, #ffd3c4 0%, #ffb8a1 100%); 
+    color: #4a291f; /* Texto café oscuro para excelente legibilidad */
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.hero-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.hero-banner p {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* CONTENIDO EN DOS SECCIONES O COLUMNAS */
+.content-body {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .content-body {
+        grid-template-columns: 1fr; /* Colapsa a 1 columna en celulares */
+    }
+}
+
+/* ESTILO DE TARJETAS */
+.card h2 {
+    font-size: 1.2rem;
+    color: #5c3225;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fde2d7;
+    padding-bottom: 8px;
+}
+
+/* FORMULARIO */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #634035;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #fcd5c7;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: #fffaf8;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff9e80;
+    box-shadow: 0 0 0 3px rgba(255, 184, 161, 0.3);
+}
+
+/* BOTÓN AGREGAR */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffb8a1; /* Tono durazno principal */
+    color: #4a291f;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #f7a38a;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* TABLA DE RESULTADOS */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+th {
+    background-color: #fff0eb; /* Encabezado durazno muy claro */
+    color: #5c3225;
+    font-weight: 600;
+    border-bottom: 2px solid #fcd5c7;
+}
+
+td {
+    border-bottom: 1px solid #f7e6e0;
+    color: #4a3830;
+}
+
+tr:hover td {
+    background-color: #fff7f4;
+}
+/* Botones de acciones en la tabla */
+.btn-accion {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 4px;
+    transition: opacity 0.2s;
+}
+
+.btn-accion:hover {
+    opacity: 0.85;
+}
+
+.btn-editar {
+    background-color: #ffb8a1;
+    color: #4a291f;
+}
+
+.btn-eliminar {
+    background-color: #e53e3e;
+    color: #ffffff;
+}
+
+/* Botón Cancelar Edición */
+.btn-cancelar {
+    width: 100%;
+    padding: 10px;
+    background-color: #cbd5e1;
+    color: #334155;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-cancelar:hover {
+    background-color: #94a3b8;
+}
+/* Contenedor Flexbox para poner los botones lado a lado */
+.acciones-contenedor {
+  display: flex;             /* Alinea los elementos en horizontal */
+  flex-direction: row;       /* Asegura la dirección horizontal */
+  gap: 8px;                  /* Espacio de separación entre los botones */
+  justify-content: center;   /* Centra los botones dentro de la celda */
+  align-items: center;       /* Los alinea verticalmente */
+}
+
+/* Opcional: Ajuste para que los botones mantengan buen tamaño */
+.acciones-contenedor button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  white-space: nowrap;       /* Evita que el texto del botón se rompa en 2 líneas */
+  padding: 6px 12px;         /* Ajusta el relleno para que no queden gigantes */
+}

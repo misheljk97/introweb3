@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas</title>
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- Fuente moderna Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <!-- BANNER PRINCIPAL -->
+        <header class="hero-banner">
+            <div class="banner-content">
+                <h1>Plataforma de Registro</h1>
+                <p>Gestiona y administra los datos de los usuarios de forma rápida y sencilla.</p>
+            </div>
+        </header>
+
+        <!-- SECCIÓN DE CONTENIDO -->
+        <div class="content-body">
+            
+            <!-- FORMULARIO -->
+            <section class="card form-card">
+                <h2 id="formTitulo">➕ Registrar Persona</h2>
+                <form id="formulario">
+                    <div class="form-group">
+                        <label for="txtNombre">Nombres:</label>
+                        <input type="text" id="txtNombre" placeholder="Ej. Juan Carlos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtApellido">Apellidos:</label>
+                        <input type="text" id="txtApellido" placeholder="Ej. Pérez Gómez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtCorreo">Correo electrónico:</label>
+                        <input type="email" id="txtCorreo" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtEdad">Edad:</label>
+                        <input type="number" id="txtEdad" placeholder="Ej. 25" min="1" max="120" required>
+                    </div>
+
+                    <button type="submit" id="btnAgregar">Agregar Registro</button>
+                    <button type="button" id="btnCancelar" class="btn-cancelar" style="display: none;">Cancelar Edición</button>
+                </form>
+            </section>
+
+            <!-- TABLA -->
+            <section class="card table-card">
+                <h2>📋 Personas Registradas</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>Correo</th>
+                                <th>Edad</th>
+                                <th>Acciones</th> <!-- Columna para los botones -->
+                            </tr>
+                        </thead>
+                        <tbody id="tablaCuerpo">
+                            <!-- Filas dinámicas -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
