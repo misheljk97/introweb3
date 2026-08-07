@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS Fan Club - Integrantes</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BTS ARMY CLUB</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="integrantes.html" class="active">Integrantes</a></li>
+                <li><a href="registro.html">Registro ARMY</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Conoce a los Miembros</h2>
+        <p class="subtitle">Haz clic en la foto de cualquier integrante para ver su biografía.</p>
+        
+        <div class="grid-members">
+            <div class="member-card">
+                <img src="img/jin.jpg" alt="Jin" onclick="showBio('jin')" class="clickable-img">
+                <h3>Jin</h3>
+                <p>Vocalista / Visual</p>
+            </div>
+            <div class="member-card">
+                <img src="img/suga.jpg" alt="Suga" onclick="showBio('suga')" class="clickable-img">
+                <h3>Suga</h3>
+                <p>Rapeador Principal</p>
+            </div>
+            <div class="member-card">
+                <img src="img/j hope.jpg" alt="J-Hope" onclick="showBio('jhope')" class="clickable-img">
+                <h3>J-Hope</h3>
+                <p>Bailarín Principal / Rapeador</p>
+            </div>
+            <div class="member-card">
+                <img src="img/rm.jpg" alt="RM" onclick="showBio('rm')" class="clickable-img">
+                <h3>RM</h3>
+                <p>Líder / Rapeador</p>
+            </div>
+            <div class="member-card">
+                <img src="img/jimin.jpg" alt="Jimin" onclick="showBio('jimin')" class="clickable-img">
+                <h3>Jimin</h3>
+                <p>Bailarín / Vocalista</p>
+            </div>
+            <div class="member-card">
+                <img src="img/v.jpg" alt="V" onclick="showBio('v')" class="clickable-img">
+                <h3>V</h3>
+                <p>Vocalista / Visual</p>
+            </div>
+            <div class="member-card">
+                <img src="img/jk.jpg" alt="Jungkook" onclick="showBio('jungkook')" class="clickable-img">
+                <h3>Jungkook</h3>
+                <p>Vocalista Principal / Centro</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal para Biografía -->
+    <div id="bioModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeBio()">&times;</span>
+            <img id="modalImg" src="" alt="" class="modal-member-img">
+            <h3 id="modalName"></h3>
+            <p id="modalRole" class="modal-role"></p>
+            <p id="modalBio" class="modal-text"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BTS ARMY Fan Club - Proyecto Académico</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

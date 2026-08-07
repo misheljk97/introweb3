@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS Fan Club - Registro de Miembros</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BTS ARMY CLUB</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="registro.html" class="active">Registro ARMY</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Gestión de Membresías ARMY (CRUD)</h2>
+
+        <!-- Dashboard Estadístico -->
+        <section class="stats-container">
+            <div class="stat-box">
+                <h4 id="statTotal">0</h4>
+                <p>Total Registrados</p>
+            </div>
+            <div class="stat-box">
+                <h4 id="statVIP">0</h4>
+                <p>Miembros VIP</p>
+            </div>
+            <div class="stat-box">
+                <h4 id="statAvgAge">0</h4>
+                <p>Promedio de Edad</p>
+            </div>
+        </section>
+
+        <!-- Formulario -->
+        <section class="form-section">
+            <h3 id="formTitle">Registrar Nuevo Miembro</h3>
+            <form id="armyForm">
+                <input type="hidden" id="memberId">
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" required placeholder="Ej: Ana López">
+                </div>
+
+                <div class="form-group">
+                    <label for="bias">Bias Favorito:</label>
+                    <select id="bias" required>
+                        <option value="">Seleccione un integrante</option>
+                        <option value="RM">RM</option>
+                        <option value="Jin">Jin</option>
+                        <option value="Suga">Suga</option>
+                        <option value="J-Hope">J-Hope</option>
+                        <option value="Jimin">Jimin</option>
+                        <option value="V">V</option>
+                        <option value="Jungkook">Jungkook</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" min="10" max="100" required placeholder="Ej: 22">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoMembresia">Tipo de Membresía:</label>
+                    <select id="tipoMembresia" required>
+                        <option value="Estándar">Estándar</option>
+                        <option value="VIP">VIP</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="btnSave">Guardar Miembro</button>
+                    <button type="button" id="btnCancel" class="btn-secondary" hidden>Cancelar Edición</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Filtros y Opciones Adicionales -->
+        <section class="controls-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre o bias...">
+            </div>
+            <div class="sort-box">
+                <label for="sortSelect">Ordenar por:</label>
+                <select id="sortSelect">
+                    <option value="nombre">Nombre (A-Z)</option>
+                    <option value="edad">Edad</option>
+                </select>
+            </div>
+            <div class="extra-actions">
+                <button id="btnExport" class="btn-extra">Exportar Resumen (Adicional 1)</button>
+                <button id="btnThemeToggle" class="btn-extra">Cambiar Modo Oscuro/Claro (Adicional 2)</button>
+            </div>
+        </section>
+
+        <!-- Tabla -->
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Bias</th>
+                        <th>Edad</th>
+                        <th>Membresía</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="armyTableBody"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BTS ARMY Fan Club - Proyecto Académico</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

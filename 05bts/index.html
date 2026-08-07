@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS Fan Club - Inicio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BTS ARMY CLUB</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="registro.html">Registro ARMY</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="img/banner.jpg" alt="BTS Banner" class="banner-img">
+            <div class="hero-text">
+                <h2 class="hero-title">✨ ¡BIENVENIDO AL CLUB OFICIAL DE FANS! ✨</h2>
+                <p class="hero-subtitle">Conecta con otros fans, apoya a los chicos y gestiona tu membresía ARMY en un solo lugar.</p>
+            </div>
+        </section>
+
+        <section class="info-cards">
+            <article class="card clickable-card" onclick="showInfoModal('musica')">
+                <h3>Música & Logros</h3>
+                <p>Explora la trayectoria global de la banda y sus hitos más importantes.</p>
+                <span class="card-btn">Ver detalles &rarr;</span>
+            </article>
+            <article class="card clickable-card" onclick="showInfoModal('comunidad')">
+                <h3>Comunidad ARMY</h3>
+                <p>Únete a eventos globales, votaciones y proyectos benéficos organizados por fans.</p>
+                <span class="card-btn">Ver detalles &rarr;</span>
+            </article>
+            <article class="card clickable-card" onclick="showInfoModal('membresia')">
+                <h3>Membresía Oficial</h3>
+                <p>Registra tus datos en nuestro sistema para obtener tu credencial virtual.</p>
+                <span class="card-btn">Ver detalles &rarr;</span>
+            </article>
+        </section>
+    </main>
+
+    <!-- Modal para Información del Inicio -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeInfoModal()">&times;</span>
+            <h3 id="infoModalTitle"></h3>
+            <p id="infoModalText" class="modal-text" style="margin-top: 1rem;"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BTS ARMY Fan Club - Proyecto Académico</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
