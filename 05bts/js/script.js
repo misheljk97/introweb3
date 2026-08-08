@@ -1,43 +1,46 @@
-let armyMembers = [
-    { id: 1, nombre: 'Camila Torres', bias: 'Jungkook', edad: 20, membresia: 'VIP' },
-    { id: 2, nombre: 'Lucas Gómez', bias: 'Jimin', edad: 24, membresia: 'Estándar' }
-];
-
-let nextId = 3;
+// Base de datos en memoria para miembros
+let armyMembers = [];
+let nextId = 1;
 let isEditing = false;
 
-// Elementos del DOM
-const armyForm = document.getElementById('armyForm');
-const memberIdInput = document.getElementById('memberId');
-const nombreInput = document.getElementById('nombre');
-const biasSelect = document.getElementById('bias');
-const edadInput = document.getElementById('edad');
-const tipoMembresiaSelect = document.getElementById('tipoMembresia');
-const btnSave = document.getElementById('btnSave');
-const btnCancel = document.getElementById('btnCancel');
-const formTitle = document.getElementById('formTitle');
-const armyTableBody = document.getElementById('armyTableBody');
-const searchInput = document.getElementById('searchInput');
-const sortSelect = document.getElementById('sortSelect');
+// Variables globales para el DOM
+let armyForm, memberIdInput, nombreInput, biasSelect, edadInput, tipoMembresiaSelect;
+let btnSave, btnCancel, formTitle, armyTableBody, searchInput, sortSelect;
+let statTotal, statVIP, statAvgAge, btnExport, btnThemeToggle;
 
-const statTotal = document.getElementById('statTotal');
-const statVIP = document.getElementById('statVIP');
-const statAvgAge = document.getElementById('statAvgAge');
-
-const btnExport = document.getElementById('btnExport');
-const btnThemeToggle = document.getElementById('btnThemeToggle');
-
-// Inicialización
+// Evento principal cargado al iniciar el DOM
 document.addEventListener('DOMContentLoaded', () => {
-    if (armyTableBody) {
+    // Captura de elementos del DOM
+    armyForm = document.getElementById('armyForm');
+    memberIdInput = document.getElementById('memberId');
+    nombreInput = document.getElementById('nombre');
+    biasSelect = document.getElementById('bias');
+    edadInput = document.getElementById('edad');
+    tipoMembresiaSelect = document.getElementById('tipoMembresia');
+    btnSave = document.getElementById('btnSave');
+    btnCancel = document.getElementById('btnCancel');
+    formTitle = document.getElementById('formTitle');
+    armyTableBody = document.getElementById('armyTableBody');
+    searchInput = document.getElementById('searchInput');
+    sortSelect = document.getElementById('sortSelect');
+
+    statTotal = document.getElementById('statTotal');
+    statVIP = document.getElementById('statVIP');
+    statAvgAge = document.getElementById('statAvgAge');
+
+    btnExport = document.getElementById('btnExport');
+    btnThemeToggle = document.getElementById('btnThemeToggle');
+
+    // Asignación de eventos para la página de Registro
+    if (armyForm) {
+        armyForm.addEventListener('submit', handleFormSubmit);
+        if (btnCancel) btnCancel.addEventListener('click', resetForm);
+        if (searchInput) searchInput.addEventListener('input', handleSearch);
+        if (sortSelect) sortSelect.addEventListener('change', handleSort);
+        if (btnExport) btnExport.addEventListener('click', exportSummary);
+        
         renderTable(armyMembers);
         updateStats();
-
-        armyForm.addEventListener('submit', handleFormSubmit);
-        btnCancel.addEventListener('click', resetForm);
-        searchInput.addEventListener('input', handleSearch);
-        sortSelect.addEventListener('change', handleSort);
-        btnExport.addEventListener('click', exportSummary);
     }
 
     if (btnThemeToggle) {
@@ -47,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Renderizar Tabla
 function renderTable(data) {
+    if (!armyTableBody) return;
     armyTableBody.innerHTML = '';
 
     if (data.length === 0) {
@@ -71,9 +75,9 @@ function renderTable(data) {
     });
 }
 
-// Registro / Edición
+// Registro y Edición de Miembros
 function handleFormSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // Evita que la página se recargue
 
     const nombre = nombreInput.value.trim();
     const bias = biasSelect.value;
@@ -106,7 +110,7 @@ function handleFormSubmit(e) {
     updateStats();
 }
 
-// Cargar para editar
+// Cargar registro en el formulario para editar
 window.editMember = function(id) {
     const member = armyMembers.find(m => m.id === id);
     if (!member) return;
@@ -123,7 +127,7 @@ window.editMember = function(id) {
     btnCancel.hidden = false;
 };
 
-// Eliminar
+// Eliminar Registro
 window.deleteMember = function(id) {
     if (confirm('¿Está seguro de que desea eliminar este registro?')) {
         armyMembers = armyMembers.filter(m => m.id !== id);
@@ -133,8 +137,9 @@ window.deleteMember = function(id) {
     }
 };
 
-// Reset
+// Limpiar Formulario
 function resetForm() {
+    if (!armyForm) return;
     armyForm.reset();
     memberIdInput.value = '';
     isEditing = false;
@@ -143,7 +148,7 @@ function resetForm() {
     btnCancel.hidden = true;
 }
 
-// Buscar
+// Búsqueda en tiempo real
 function handleSearch() {
     const query = searchInput.value.toLowerCase();
     const filtered = armyMembers.filter(m => 
@@ -153,7 +158,7 @@ function handleSearch() {
     renderTable(filtered);
 }
 
-// Ordenar
+// Ordenar registros
 function handleSort() {
     const sortBy = sortSelect.value;
     let sorted = [...armyMembers];
@@ -167,8 +172,10 @@ function handleSort() {
     renderTable(sorted);
 }
 
-// Actualizar estadísticas
+// Actualizar Indicadores / Estadísticas
 function updateStats() {
+    if (!statTotal) return;
+    
     const total = armyMembers.length;
     const vips = armyMembers.filter(m => m.membresia === 'VIP').length;
     
@@ -198,7 +205,7 @@ function toggleTheme() {
     document.body.classList.toggle('dark-mode');
 }
 
-// --- LÓGICA DE MODALES DE INFORMACIÓN Y BIOGRAFÍAS ---
+// --- MODALES DE INFORMACIÓN Y BIOGRAFÍAS ---
 const infoDefinitions = {
     musica: {
         titulo: "🎵 Música & Logros",
@@ -268,7 +275,8 @@ function showInfoModal(key) {
 }
 
 function closeInfoModal() {
-    document.getElementById('infoModal').style.display = 'none';
+    const modal = document.getElementById('infoModal');
+    if (modal) modal.style.display = 'none';
 }
 
 function showBio(memberKey) {
@@ -282,11 +290,13 @@ function showBio(memberKey) {
 }
 
 function closeBio() {
-    document.getElementById('bioModal').style.display = 'none';
+    const modal = document.getElementById('bioModal');
+    if (modal) modal.style.display = 'none';
 }
 
 window.addEventListener('click', function(event) {
     const bioModal = document.getElementById('bioModal');
     const infoModal = document.getElementById('infoModal');
     if (event.target === bioModal) closeBio();
-    if (event.target === infoModal) closeInfoModal
+    if (event.target === infoModal) closeInfoModal();
+});
